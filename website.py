@@ -8,7 +8,7 @@ class AwsS3Website(pulumi.ComponentResource):
         super().__init__('quickstart:index:AwsS3Website', name, { 'files': files }, opts)
 
         # Create an AWS resource (S3 Bucket)
-        bucket = s3.Bucket('my-bucket',
+        bucket = s3.Bucket('devops-dojo-bucket',
             # Set the parent to the component (step #2) above.
             # Also, do the same for all other resources below.
             opts=pulumi.ResourceOptions(parent=self),
